@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	<title>Random calculator</title>
+	<script type="text/javascript" charset="utf-8">
+
+	function sum(optag, restag){
+		var operation = document.getElementById(optag);
+		var dats = operation.innerHTML.split("+");
+		var result = document.getElementById(restag);
+		var suma = parseInt(dats[0]) + parseInt(dats[1]);
+		result.innerHTML = "= "+ suma;
+	}
+
+	function random(optag){
+		var operation = document.getElementById(optag);
+		operation.innerHTML = Math.round(Math.random()*1000)+ "+" + 
+		Math.round(Math.random()*1000);
+	}
+
+	</script>
+	</head>
+
+	<body>
+
+		<p>Adder...<span id='op'>5+3</span>
+		<span id="res"></span> <a href="javascript:sum('op','res')">Add!</a></p>
+		<p><a href="javascript:random('op')"> New Random!!</a></p>
+
+
+	</body>
+	</html>
